@@ -1,0 +1,145 @@
+@charset "UTF-8";
+html {
+  font-family: arial, sans-serif;
+  font-size: 120%;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  html {
+    font-size: 100%;
+  }
+}
+body {
+  margin: 0;
+  padding: 0;
+  background: lightgray;
+}
+
+form {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: .8em;
+}
+
+form input[type=text] {
+  width: 100%;
+  font-size: 1rem;
+}
+
+form input[type=submit] {
+  background-color: #FB3030;
+  border: none;
+  color: white;
+  padding: 1.2em;
+  border-right: 2px solid white;
+  cursor: pointer;
+}
+
+form button {
+  background-color: #FB3030;
+  border: none;
+  color: white;
+  padding: 1.2em;
+  cursor: pointer;
+}
+
+.loader {
+  text-align: center;
+  font-size: 1.5rem;
+  padding-top: 1.5rem;
+}
+.main-header {
+  text-align: center;
+  background: #16210b;
+  color: #fff;
+  padding: 2em;
+}
+
+.main-header h1 {
+  font-size: 2rem;
+}
+
+.main-header h2 {
+  font-size: 1rem;
+}
+
+@media screen and (min-width: 500px) {
+  .main-header h1 {
+    font-size: 1.7rem;
+  }
+}
+.card {
+  height: 30vh;
+  width: 100%;
+  background: #2f4e84;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  padding-top: 0.4em;
+  font-family: 'Megrim', cursive;
+  position: relative;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.card__title {
+  margin: 0;
+  text-align: center;
+  font-size: 2em;
+}
+
+.card__date {
+  margin: 0;
+  font-size: .7em;
+  text-align: center;
+}
+
+.card--valencia {
+  background-image: url(../images/valencia-small.jpg);
+}
+
+.card--mv {
+  background-image: url(../images/mv-small.jpg);
+}
+
+@media (min-width: 760px) {
+  .card--valencia {
+    background-image: url(../images/valencia.jpg);
+    background-position: center;
+  }
+
+  .card--mv {
+    background-image: url(../images/mv.jpg);
+    background-position: center;
+  }
+}
+.card__info {
+  position: absolute;
+  bottom: 0.4em;
+  left: 0.4em;
+  text-align: center;
+}
+
+.card__image {
+  display: block;
+  margin: 0 auto;
+}
+
+.card__temp {
+  display: block;
+  font-size: 3rem;
+  line-height: 1em;
+}
+
+.card__temp::after {
+  content: "°";
+}
+
+.card__maxt::before {
+  content: "Max: ";
+}
+
+.card__mint::before {
+  content: "Min: ";
+}
